@@ -3,37 +3,37 @@
 
 int Profit(int deposit, int time) {
     if (deposit > 100000) {
-		if (time <= 30) {
+		if (time <= 4) {
 			deposit = deposit - deposit / 10;
 		}
 
-		if (time > 30 && time <= 120) {
+		if (time > 4 && time <= 17) {
 			deposit = 1.03 * deposit;
 		}
 
-		if (time > 120 && time <= 240) {
+		if (time > 17 && time <= 34) {
 			deposit = 1.08 * deposit;
 		}
 
-		if (time > 240 && time <= 365) {
+		if (time > 34 && time <= 52) {
 			deposit = 1.15 * deposit;
 		}
     }
 
     if (deposit <= 100000) {
-		if (time <= 30) {
+		if (time <= 4) {
 			deposit = deposit - deposit / 10;
 		}
 
-		if (time > 30 && time <= 120) {
+		if (time > 4 && time <= 17) {
 			deposit = 1.02 * deposit;
 		}
 
-		if (time > 120 && time <= 240) {
+		if (time > 17 && time <= 34) {
 			deposit = 1.06 * deposit;
 		}
 
-		if (time > 240 && time <= 365) {
+		if (time > 34 && time <= 52) {
 			deposit = 1.12 * deposit;
 		}
     }
@@ -46,7 +46,7 @@ int Check(int deposit, int time) {
     	return 1;
     }
 
-    if (time <= 0 || time > 365) {
+    if (time <= 0 || time > 52) {
     	return 1;
     }
     return 0;
